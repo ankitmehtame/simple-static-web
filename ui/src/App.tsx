@@ -1,7 +1,13 @@
-import React from 'react';
-import './App.css';
-import styled from 'styled-components';
-import { HashRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import React from 'react'
+import {
+  HashRouter as Router,
+  Link,
+  Redirect,
+  Route,
+  Switch
+} from 'react-router-dom'
+import styled from 'styled-components'
+import './App.css'
 
 const CenterAlignDiv = styled.div`
   text-align: center;
@@ -41,29 +47,23 @@ function App() {
           <Route exact path='/'>
             <Redirect to='/home' />
           </Route>
-          <Route path="/home">
+          <Route path='/home'>
             <CenterAlignDiv>
               <AppHeader>
-                <p>
-                  Cool Home Page
-                </p>
+                <p>Cool Home Page</p>
               </AppHeader>
             </CenterAlignDiv>
           </Route>
-          <Route path="/other">
-            <AppHeader>
-              The Other Page
-          </AppHeader>
+          <Route path='/other'>
+            <AppHeader>The Other Page</AppHeader>
           </Route>
           <Route>
-            <AppHeader>
-              Not found
-          </AppHeader>
+            <AppHeader>Not found</AppHeader>
           </Route>
         </Switch>
       </AppContainer>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
